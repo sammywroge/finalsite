@@ -656,6 +656,9 @@ header.hamburger>nav.show{
         margin: 1rem auto;
         display: block;
     }
+    .clients{
+        margin-bottom: 10rem;
+    }
 }
 @media (max-width: 600px){
     footer p:last-child{
@@ -673,5 +676,8 @@ header.hamburger>nav.show{
     nav>div:nth-child(4)>div{
         left: unset;
         right: 0;
+    }
+    .article{
+        flex-wrap: wrap;
     }
 }
