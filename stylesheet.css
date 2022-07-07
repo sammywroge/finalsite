@@ -261,7 +261,7 @@ a:hover{
     padding: 1.5rem;
     display: flex;
     align-items: flex-start;
-    justify-content: center; 
+    justify-content: center;
     gap: 1rem;
     color: #fffff6;
 }
@@ -679,8 +679,12 @@ header.hamburger>nav.show{
     }
     .article{
         flex-wrap: wrap;
+        justify-content: flex-start;
     }
     .article>img{
+        width: 100%;
+    }
+    .article>div{
         width: 100%;
     }
 }
