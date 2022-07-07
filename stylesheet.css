@@ -670,4 +670,8 @@ header.hamburger>nav.show{
     .about-me p{
         font-size: 1rem;
     }
+    nav>div:first-child>div{
+        left: unset;
+        right: 0;
+    }
 }
