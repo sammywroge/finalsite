@@ -2,147 +2,166 @@ main{
     position: relative;
 }
 .film{
-    border-top: 2rem solid #fffff6;
-    height: 20rem;
-    width: 200%;
-    margin-top: 5rem;
-    border-bottom: 2rem solid #fffff6;
-    margin-bottom: 5rem;
+    border-top: 2.5rem solid #fffff6;
+    width: 100%;
+    height: 27rem;
     overflow: hidden;
-    position: absolute;
-    left:-50%;
-    top:0;
+    border-bottom: 2.5rem solid #fffff6;
+    position: relative;
+    background-color: #fffff6;
 }
 .film img{
-    max-height: 100%;
     border-left: 1rem solid #fffff6;
     border-right: 1rem solid #fffff6;
     margin-right: -5px;
     display: inline-block;
+    width: calc(25% - 1.97rem);
 }
-.film img{
+.film div{
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-fill-mode: both;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
 }
-.film img:first-child{
+.squares>.top-strip>div, .squares>.bottom-strip>div{
+    background-color: #383636;
+    height: 1.5rem;
+    width: calc(3.86% - .5rem);
+    border-radius: 2px;
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+.top-strip, .bottom-strip{
+    position: absolute;
+    width: 100%;
+    height: 2rem;
+    z-index: 1;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    display:flex;
+    justify-content: space-around;
+}
+.top-strip{
+    top: 0.5rem;
+}
+.bottom-strip{
+    bottom: 0;
+}
+.top-animation-1{
+    left: 0;
+    animation-name: top-square-1;
+}
+@keyframes top-square-1{
+    from{
+        left: 0;
+    }
+    50%{left: -100%; opacity: 1;
+    }
+    50.01%{opacity: 0;}
+    50.02%{left: 100%; opacity: 1;}
+    to{
+        left: 0;
+    }
+}
+.top-animation-2{
+    right: -100%;
+    animation-name: top-square-2;
+}
+@keyframes top-square-2{
+    from{
+        right: -100%; opacity: 1;
+    }
+    50%{right: 0;
+    }
+    99.99%{right: 100%; opacity: 1;}
+    to{opacity: 0;}
+}
+.squares{
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+.film div:nth-child(1){
     animation-name: first-film
 }
 @keyframes first-film{
     from{
-        transform: translateX(0);
+        left: 0;
     }
-    50%{transform: translateX(100vw); opacity: 1;
+    50%{left: 100%; opacity: 1;
     }
-    50.05%{
-        opacity: 0;
-    }
-    50.1%{transform: translateX(-100vw);}
-    50.15%{
-        opacity: 1;
-    }
+    50.01%{opacity: 0;}
+    50.02%{left: -100%; opacity: 1;}
     to{
-        transform: translateX(0);
+        left: 0;
     }
 }
-.film img:nth-child(2){
-    animation-name: second-film
+.film div:nth-child(2){
+    animation-name: second-film;
+    left: unset;
+    right: 100%;
 }
 @keyframes second-film{
     from{
-        transform: translateX(0);
+        right: 100%; opacity: 1;
     }
-    50%{transform: translateX(100vw); opacity: 1;
+    50%{right: 0;
     }
-    50.05%{
-        opacity: 0;
-    }
-    50.1%{transform: translateX(-100vw);}
-    50.15%{
-        opacity: 1;
-    }
-    to{
-        transform: translateX(0);
+    99.99%{right: -100%; opacity: 1;}
+    to{opacity: 0;}
+}
+@media (max-width:1100px){
+    .film{
+        height: 19rem;
     }
 }
-.film img:nth-child(3){
-    animation-name: third-film
-}
-@keyframes third-film{
-    from{
-        transform: translateX(0);
-    }
-    50%{transform: translateX(100vw); opacity: 1;
-    }
-    50.05%{
-        opacity: 0;
-    }
-    50.1%{transform: translateX(-100vw);}
-    50.15%{
-        opacity: 1;
-    }
-    to{
-        transform: translateX(0);
+@media (max-width:800px){
+    .film{
+        height: 13rem;
     }
 }
-.film img:nth-child(4){
-    animation-name: fourth-film
-}
-@keyframes fourth-film{
-    from{
-        transform: translateX(0);
+@media (max-width:1320px){
+    .squares>.top-strip, .squares>.bottom-strip{
+        overflow: hidden;
     }
-    50%{transform: translateX(100vw); opacity: 1;
+    .squares>.top-strip>.film-desktop, .squares>.bottom-strip>.film-desktop{
+        display: none;
     }
-    50.05%{
-        opacity: 0;
-    }
-    50.1%{transform: translateX(-100vw);}
-    50.15%{
-        opacity: 1;
-    }
-    to{
-        transform: translateX(0);
+    .squares>.top-strip>div, .squares>.bottom-strip>div{
+        width:calc(5.88% - .5rem);
     }
 }
-.film img:nth-child(5){
-    animation-name: fifth-film
-}
-@keyframes fifth-film{
-    from{
-        transform: translateX(0);
+@media (max-width:600px){
+    .film div{
+        width: 200vw;
     }
-    50%{transform: translateX(100vw); opacity: 1;
+    .film img{
+        width: calc(50vw - 1.97rem);
     }
-    50.05%{
-        opacity: 0;
+    .film{
+        height: 19rem;
     }
-    50.1%{transform: translateX(-100vw);}
-    50.15%{
-        opacity: 1;
+    .squares>.top-strip>.film-tablet, .squares>.bottom-strip>.film-tablet{
+        display: none;
     }
-    to{
-        transform: translateX(0);
+    .squares>.top-strip>div, .squares>.bottom-strip>div{
+        width:calc(11.86% - .5rem);
     }
 }
-.film img:nth-child(6){
-    animation-name: sixth-film
-}
-@keyframes sixth-film{
-    from{
-        transform: translateX(0);
+@media (max-width:400px){
+    .film div{
+        width: 400vw;
     }
-    50%{transform: translateX(100vw); opacity: 1;
+    .film img{
+        width: calc(100vw - 1.97rem);
     }
-    50.05%{
-        opacity: 0;
-    }
-    50.1%{transform: translateX(-100vw);}
-    50.15%{
-        opacity: 1;
-    }
-    to{
-        transform: translateX(0);
+    .film{
+        height: 27rem;
     }
 }

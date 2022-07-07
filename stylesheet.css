@@ -191,7 +191,7 @@ nav>div>a:hover+div, nav>div>div:hover{
     justify-content: center;
     flex-wrap: wrap;
 }
-.client-details>p, .about-me p, .service-details p, .podcast-details p{
+.client-details>div>p, .about-me p, .service-details p, .podcast-details p{
     padding: 1.5rem;
     max-width: 50rem;
     font-size: 1.25rem;
@@ -201,6 +201,38 @@ nav>div>a:hover+div, nav>div>div:hover{
     color: #ffbe5c;
 }
 .client-details p, .client-details h2{
+    color: #fffff6;
+}
+.logos{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.logos img{
+    width: 100%;
+}
+.logos a{
+    width: 20%;
+}
+.tour{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.tour h3{
+    color: #ffbe5c;
+}
+.tour>div{
+    border: 0.125rem solid #fffff6;
+    padding: 1rem;
+}
+.tour a{
     color: #fffff6;
 }
 a{
@@ -217,6 +249,13 @@ a:hover{
 .client-details>div, .about-me>div{
     text-align: center;
 }
+.quote{
+    color: #15c3ff;
+    font-size: 1.3rem;
+}
+.author{
+    text-align: right;
+}
 .article{
     padding: 1.5rem;
     display: flex;
@@ -227,6 +266,10 @@ a:hover{
 }
 .article h2{
     color: #ffbe5c;
+    margin: 0;
+}
+.article h3{
+    color: #fffff6;
     margin-top: 0;
 }
 .article>img{
@@ -277,7 +320,7 @@ a:hover{
 }
 .giant-circles>a{
     color: #fffff6;
-    padding: 9.3rem 0;
+    padding: 9.5rem 0;
     width: 21.5rem;
     display: inline-block;
     border-radius: 20rem;
@@ -298,6 +341,24 @@ a:hover{
 .giant-circles.services{
     transform: scale(0.75);
     transform-origin: top;
+}
+.services-icons img{
+    max-width: 100%;
+}
+.services-icons>a{
+    padding: 1rem 0;
+}
+.service-details h1.orange-font{
+    color: #ffbe5c;
+}
+.service-details h1.blue-font{
+    color: #15c3ff;
+}
+.service-details h1.charcoal-font{
+    color: #fffff6;
+}
+.service-details h1.gray-font{
+    color: #d9d9d9;
 }
 .medium-circles>a{
     color: #fffff6;
@@ -434,6 +495,27 @@ fieldset{
     font-size: 2rem;
     margin-bottom: 0.75rem;
 }
+.newsroom-details>div>h1{
+    margin: 0;
+}
+.newsroom-details>div>h2{
+    margin-bottom: 2.5rem;
+    margin-top: 0;
+    color: #fffff6;
+}
+.newsroom-details p{
+    margin: 1.5rem 0
+}
+.newsroom-details{
+    padding: 2rem;
+}
+figcaption{
+    text-align: center;
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
 .service-details>div>h1{
     text-align: center;
 }
@@ -461,6 +543,16 @@ fieldset{
 .podcast-details iframe{
     margin: 0.5rem 0;
 }
+.coming-soon{
+    font-size: x-large; 
+    color: #d9d9d9;
+    text-align: center;
+    text-decoration: none;
+    margin: 2rem;
+    padding-top: 6.5rem;
+    height: 18.5rem;
+    position: relative;
+}
 /* home page navigation */
 header.hamburger>div{
     display: block;
@@ -477,6 +569,7 @@ header.hamburger>div{
     flex-direction: column;
     gap: 1rem;
     padding: .5rem;
+    z-index: 2;
 }
 header.hamburger>div>hr{
     border-width: .15rem;
@@ -543,7 +636,7 @@ header.hamburger>nav.show{
         gap: 2rem 1rem;
         padding: 2rem 1.5rem;
     }
-    .clients{
+    .clients, .coming-soon{
         margin: 1rem 0;
     }
     .article, .outside-article{
@@ -553,5 +646,19 @@ header.hamburger>nav.show{
 @media (max-width: 780px){
     .break-point{
         display: block;
+    }
+}
+@media (max-width: 1295px){
+    .service-details>div>img{
+        width: 20rem;
+        max-width: 95%;
+        margin: 1rem auto;
+        display: block;
+    }
+}
+@media (max-width: 600px){
+    footer p:last-child{
+        text-align: center;
+        flex: 100%;
     }
 }
