@@ -115,6 +115,7 @@ nav>div>a:hover+div, nav>div>div:hover{
     width: 25rem;
     margin: 1rem auto; 
     text-align: center;
+    max-width: 100%;
 }
 .client-bio img{
     max-width: 100%;
@@ -660,5 +661,13 @@ header.hamburger>nav.show{
     footer p:last-child{
         text-align: center;
         flex: 100%;
+    }
+}
+@media (max-width: 460px){
+    nav>div>div{
+        left: 0;
+    }
+    .about-me p{
+        font-size: 1rem;
     }
 }
