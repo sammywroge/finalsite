@@ -85,6 +85,7 @@ nav{
 }
 nav>div>a:hover+div, nav>div>div:hover{
     display: flex;
+    align-items: center;
 }
 .break-point{
     display: inline-block;
