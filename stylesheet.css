@@ -680,4 +680,7 @@ header.hamburger>nav.show{
     .article{
         flex-wrap: wrap;
     }
+    .article>img{
+        width: 100%;
+    }
 }
