@@ -566,7 +566,7 @@ header.hamburger>div{
     display: none;
     position: fixed;
     top: 3rem;
-    right: 3rem;
+    right: 2rem;
     flex-direction: column;
     gap: 1rem;
     padding: .5rem;
