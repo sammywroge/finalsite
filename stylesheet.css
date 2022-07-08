@@ -688,4 +688,14 @@ header.hamburger>nav.show{
     .article>div{
         width: 100%;
     }
+    .outside-article{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .outside-article>img{
+        width: 100%;
+    }
+    .outside-article>div{
+        width: 100%;
+    }
 }
