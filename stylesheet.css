@@ -9,6 +9,10 @@
     margin: 0 0.09rem;
     margin-bottom: 0.75rem;
 }
+.podcast-details .dots{
+    display: block;
+    margin-bottom: 2rem;
+}
 .orange{
     background-color: #ffbe5c;
 }
@@ -540,7 +544,7 @@ figcaption{
 }
 .podcast-details p{
     margin: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .podcast-details iframe{
     margin: 0.5rem 0;
