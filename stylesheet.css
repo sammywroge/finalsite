@@ -333,6 +333,7 @@ a:hover{
     text-align: center;
     margin: 1rem;
     font-size: 2rem;
+    vertical-align: text-top;
 }
 .giant-circles{
     text-align: center;
@@ -354,17 +355,20 @@ a:hover{
 .services-icons>a{
     padding: 1rem 0;
 }
-.service-details h1.orange-font{
+h1.orange-font{
     color: #ffbe5c;
 }
-.service-details h1.blue-font{
+h1.blue-font{
     color: #15c3ff;
 }
-.service-details h1.charcoal-font{
+h1.charcoal-font{
     color: #fffff6;
 }
-.service-details h1.gray-font{
+h1.gray-font{
     color: #d9d9d9;
+}
+.giant-circles h1{
+    font-size: 2.5rem;
 }
 .medium-circles>a{
     color: #fffff6;
