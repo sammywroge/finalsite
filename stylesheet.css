@@ -230,6 +230,7 @@ nav>div>a:hover+div, nav>div>div:hover{
     margin-top: 2.5rem;
     flex-wrap: wrap;
     margin-bottom: 2rem;
+    text-align: center;
 }
 .tour h3{
     color: #ffbe5c;
