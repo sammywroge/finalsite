@@ -26,6 +26,7 @@
 }
 .charcoal{
     background-color: #383636;
+    border: .12rem solid #fffff6;
 }
 body{
     background-color: #383636;
@@ -34,7 +35,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 header{
-    background-color: #fffff6;
+    background-color: #383636;
     display: flex;
     justify-content: center;
     position: relative;
@@ -42,9 +43,16 @@ header{
     padding: .5rem;
     gap: 1rem;
 }
+.divider{
+    border-top: 0.2rem solid #fffff6;
+}
 .logo{
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
+}
+.logo2{
+    width: 100%;
+    max-width: 180px; 
 }
 nav>a, nav>div>a, nav>div>div>a{
     width: 4.25rem;
@@ -86,6 +94,7 @@ header>div{
 nav{
     text-align: center;
     flex-basis: 100%;
+    margin-top: -1.4rem;
 }
 nav>div>a:hover+div, nav>div>div:hover{
     display: flex;
@@ -368,6 +377,18 @@ h1.charcoal-font{
 h1.gray-font{
     color: #d9d9d9;
 }
+.service-details h1.orange-font{
+    color: #ffbe5c;
+}
+.service-details h1.blue-font{
+    color: #15c3ff;
+}
+.service-details h1.charcoal-font{
+    color: #fffff6;
+}
+.service-details h1.gray-font{
+    color: #d9d9d9;
+}
 .giant-circles h1{
     font-size: 2.5rem;
 }
@@ -566,6 +587,9 @@ figcaption{
     position: relative;
 }
 /* home page navigation */
+header.hamburger{
+    margin-bottom: -4rem;
+}
 header.hamburger>div{
     display: block;
     position: absolute;
