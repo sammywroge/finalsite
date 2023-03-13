@@ -600,7 +600,7 @@ header.hamburger>div{
 }
 .hamburger>nav{
     display: none;
-    position: fixed;
+    position: absolute;
     top: 3rem;
     right: 2rem;
     flex-direction: column;
